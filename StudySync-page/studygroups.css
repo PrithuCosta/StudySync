@@ -1,0 +1,171 @@
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic Styling */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background and Layout */
+body {
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 80px; /* Offset for the fixed navbar, adjust if navbar height changes */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for centered content */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #ffffff;
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ffcc00;
+}
+
+/* Course Name Section */
+.Course-name {
+    text-align: center;
+    background: url('images/boat.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 62%;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin: 0 auto 20px auto; /* Adjusted for horizontal centering */
+}
+.Course-name h1 {
+    color: #ffffff;
+}
+.intro-container{
+    text-align: center;
+    background-color: #ffffff;
+    width: 62%;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin: 0 auto 20px auto; /* Adjusted for horizontal centering */
+}
+.intro-container h2 {
+    color: #000000;
+}
+.groups-container {
+    background-color: #fff; /* Assuming a white background */
+    border: 1px solid #ddd; /* Light grey border as per image */
+    padding: 20px; /* Adjust padding as needed */
+    margin-top: 20px; /* Space from the top of the main content */
+    width: 62%;
+    margin: 0 auto 20px auto;
+}
+
+.search-bar {
+    margin-bottom: 20px; /* Space between search bar and group items */
+}
+
+.search-bar input[type="search"] {
+    width: 100%; /* Full width search bar */
+    padding: 10px; /* Padding for input */
+    margin-bottom: 20px; /* Space between search bar and group items */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners for the input */
+}
+
+.group-item {
+    border-bottom: 1px solid #ddd; /* Light grey border between items */
+    padding: 10px 0; /* Padding above and below text */
+    cursor: pointer; /* Indicates the item is clickable */
+}
+
+.group-item:last-child {
+    border-bottom: none; /* Removes border from the last item */
+}
+.group-item {
+    display: block; /* Makes the link take up the full width */
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets text color, adjust as needed */
+    border-bottom: 1px solid #ddd; /* Light grey border between items */
+    padding: 10px 0; /* Padding above and below text */
+    cursor: pointer; /* Indicates the item is clickable */
+    transition: background-color 0.3s; /* Smooth background color change when hovering */
+}
+
+.group-item:hover {
+    background-color: #f2f2f2; /* Light grey background on hover for visual feedback */
+}
+
+.group-item:last-child {
+    border-bottom: none; /* Removes border from the last item */
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .group-link {
+        width: calc(100% / 2 - 30px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .group-link {
+        width: 100%; /* Full width on small screens */
+        padding: 20px 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

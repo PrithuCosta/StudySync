@@ -1,0 +1,229 @@
+/* Global Resets */
+/* Resets margin and padding for all elements to ensure a consistent starting point. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+/* Sets the minimum height of the body to fill the viewport, applies a background image, and sets a default font. */
+body {
+    min-height: 100vh;
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat center;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+/* Styles the main navigation bar including its background color and shadow for depth. */
+nav {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+/* Navigation List */
+/* Configures the layout of the navigation list to be horizontal and aligns items to the end (right side). */
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Navigation Items */
+/* Sets a uniform height for all navigation items. */
+nav li {
+    height: 50px;
+}
+
+/* Navigation Links */
+/* Styles for navigation links, including padding, color, and flexbox alignment. */
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(42, 40, 40);
+}
+
+/* Navigation Link Hover Effect */
+/* Adds a background color to navigation links on hover for visual feedback. */
+nav a:hover {
+    background-color: rgba(56, 53, 53, 0.452);
+}
+
+/* First Navigation Item Styling */
+/* Pushes the first navigation item to the left by auto-marginalizing the right side. */
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* Sidebar Styling */
+/* Sets up the sidebar's fixed position, dimensions, visibility, and visual styling. */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.503);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Sidebar List and Link Styling */
+/* Ensures sidebar elements occupy the full available width. */
+.sidebar li,
+.sidebar a {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+/* Initially hides the mobile menu button, shown only in responsive contexts. */
+.menu-button {
+    display: none;
+}
+
+/* Responsive Design Adjustments */
+/* Styles applied for screens narrower than 950px, including hiding specific elements and showing the menu button. */
+@media(max-width:950px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Sidebar Adjustment for Very Small Screens */
+/* Ensures the sidebar takes the full screen width on devices narrower than 450px. */
+@media(max-width:450px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Course Name Section */
+/* Styles the course name section with a background image, central alignment, and shadow for emphasis. */
+.Course-name {
+    text-align: center;
+    background: url('images/boat.jpg') no-repeat center;
+    background-size: cover;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 1190px;
+    margin: 0 auto 20px;
+}
+.Course-name h1 {
+    color: #ffffff;
+}
+
+/* Main Content Container */
+/* Configures the main content area with flexbox for layout, including spacing and alignment. */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0 20px;
+    max-width: 1210px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Column Layout within Container */
+/* Defines the styling for left and right columns within the main content area. */
+.left-column {
+    flex: 3;
+    padding: 0 10px;
+}
+.right-column {
+    flex: 1;
+    padding-left: 20px;
+}
+
+/* Responsive Container Adjustment */
+/* Adjusts the container to a column layout for narrower screens, ensuring content remains accessible. */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .left-column,
+    .right-column {
+        padding: 0;
+    }
+}
+
+/* Updates, Calendar, and Announcements Styling */
+/* Applies consistent styling to these content blocks including background, shadow, and spacing. */
+.updates, .calendar, .announcements {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.announcements {
+    width: 90%;
+    padding: 40px;
+}
+
+/* Card Component Styling */
+/* Styles for individual cards within content blocks, including position and separators. */
+.card {
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.card .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Miscellaneous Styling */
+/* Additional stylings including borders under headings and padding for events. */
+h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+.event {
+    padding: 15px 0;
+}
+
+/* Form Styling */
+/* Styles the input form, including background, shadow, input styling, and buttons. */
+.input-form {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 94.5%;
+}
+.input-form input,
+.input-form textarea {
+    margin: 5px 0;
+    padding: 10px;
+    width: 97%;
+}
+.input-form button {
+    padding: 10px 20px;
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat center;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.input-form button:hover {
+    background-color: #45a049;
+}

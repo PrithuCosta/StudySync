@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background:url('images/vivid-blurred-colorful-background.jpg') no-repeat;
+    background-size: cover; /* Adjusts the background image size to cover the entire container */
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(42, 40, 40);
+}
+
+nav a:hover{
+    background-color: rgba(56, 53, 53, 0.452);
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    height: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.503);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+@media(max-width:950px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width:450px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.our-team {
+    text-align: center;
+    background-color: #ffffff; /* Or any color that fits your design */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Adjust as needed */
+    margin: 80px auto; /* This ensures it doesn't touch the navbar */
+    max-width: 1200px; /* Matches your container width */
+}
+
+.our-team h2 {
+    color: #333; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.our-team p {
+    color: #555; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.our-team .team-member {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: top;
+}
+
+.our-team .team-member img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Round image */
+    border: 4px solid #eee; /* Border around the image */
+    margin-bottom: 10px;
+}
+
+.our-team .team-member h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.our-team .team-member p {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.our-team .team-member a {
+    color: #333;
+    margin: 0 5px;
+    font-size: 1.2em; /* Adjust as needed */
+}
+
+.our-team .team-member a:hover {
+    color: #555; /* Hover color */
+}
+
+/* You might need to adjust your media queries to ensure the layout stays responsive on smaller screens */
+@media(max-width: 950px) {
+    .our-team .team-member {
+        display: block;
+        margin: 20px auto;
+    }
+}

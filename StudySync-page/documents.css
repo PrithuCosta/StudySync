@@ -1,0 +1,248 @@
+/* Global Reset */
+/* Ensures there's no margin or padding across all elements for consistency. */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+/* Sets up the background image, ensuring it covers the entire viewport, and applies a default font. */
+body {
+  min-height: 100vh;
+  background: url('images/vivid-blurred-colorful-background.jpg') no-repeat center;
+  background-size: cover; /* Ensures the background stretches to cover the entire viewport */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+/* Styles the navigation bar with a white background and a subtle shadow for depth. */
+nav {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+/* Navigation List */
+/* Sets up the navigation list as a flex container to align items to the right. */
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Navigation Items */
+/* Sets a fixed height for navigation items for uniformity. */
+nav li {
+  height: 50px;
+}
+
+/* Navigation Links */
+/* Styles for the navigation links, including padding, color, and flex alignment. */
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(4, 4, 4);
+}
+
+/* Navigation Link Hover Effect */
+/* Adds a hover effect to navigation links for visual feedback. */
+nav a:hover {
+  background-color: rgba(54, 52, 52, 0.553);
+}
+
+/* First Navigation Item */
+/* Moves the first navigation item to the left side by using auto margin on the right. */
+nav li:first-child {
+  margin-right: auto;
+}
+
+/* Sidebar */
+/* Styles the sidebar with fixed positioning, dimensions, and visual effects like backdrop filter. */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.503);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Sidebar List Items */
+/* Ensures full width for sidebar items for a clean, aligned look. */
+.sidebar li,
+.sidebar a {
+  width: 100%;
+}
+
+/* Mobile Menu Button */
+/* Hides the mobile menu button by default; shown only in responsive states. */
+.menu-button {
+  display: none;
+}
+
+/* Responsive Adjustments */
+/* Adjusts navigation and sidebar visibility and layout for different viewport widths. */
+@media(max-width:950px) {
+  .hideOnMobile {
+      display: none;
+  }
+  .menu-button {
+      display: block;
+  }
+}
+@media(max-width:450px) {
+  .sidebar {
+      width: 100%;
+  }
+}
+
+/* Text Selection Styling */
+/* Customizes the appearance of text selection for enhanced visual feedback. */
+::selection {
+  color: #ffffff;
+  background: #6990F2;
+}
+
+/* Wrapper */
+/* Centers the wrapper and applies styling for background, borders, and shadow. */
+.wrapper {
+  width: 600px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+
+/* Wrapper Header */
+/* Styles the header within the wrapper, including color and typography. */
+.wrapper header {
+  color: #6990F2;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form Styling */
+/* Sets up the form within the wrapper, including layout and interactivity cues. */
+.wrapper form {
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990F2;
+}
+
+/* Form Text and Icons */
+/* Styles icons and paragraphs within the form for visual consistency with the theme. */
+form :where(i, p) {
+  color: #6990F2;
+}
+form i {
+  font-size: 50px;
+}
+form p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* Content Rows */
+/* Styles for rows within sections, including background, layout, and spacing. */
+section .row {
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i {
+  color: #6990F2;
+  font-size: 30px;
+}
+
+/* Detail Text Styling */
+/* Styles for span elements within details, adjusting font size for readability. */
+section .details span {
+  font-size: 14px;
+}
+
+/* Progress Area Styling */
+/* Layout and visual styling for the progress area, including bars and content alignment. */
+.progress-area .row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar {
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit;
+}
+
+/* Uploaded Area Styling */
+/* Styles the area for uploaded files, including scrollbar and layout adjustments. */
+.uploaded-area {
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress {
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Uploaded Content Row Styling */
+/* Adjusts the layout of content rows within the uploaded area for clarity and alignment. */
+.uploaded-area .row .content {
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+/* File Size and Status Icon Styling */
+/* Styles for displaying file size and status icons within uploaded content rows. */
+.uploaded-area .row .details .size {
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check {
+  font-size: 16px;
+}

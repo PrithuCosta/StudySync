@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background:url('images/vivid-blurred-colorful-background.jpg') no-repeat;
+    background-size: cover; /* Adjusts the background image size to cover the entire container */
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover{
+    background-color: rgba(59, 55, 55, 0.342);
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    height: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.503);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+@media(max-width:950px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width:450px){
+    .sidebar{
+        width: 100%;
+    }
+}
+h1 {
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    font-weight: 600;
+  }
+  .calendar {
+    margin: 10%;
+    max-width: 500px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .calendar header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .calendar nav {
+    display: flex;
+    align-items: center;
+  }
+  .calendar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .calendar ul li {
+    width: calc(100% / 7);
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+  }
+  #prev,
+  #next {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  #prev::before,
+  #next::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    border-color: #ccc;
+  }
+  #next::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  #prev::before {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+  #prev:hover::before,
+  #next:hover::before {
+    border-color: #000;
+  }
+  .days {
+    font-weight: 600;
+  }
+  .dates li.today {
+    color: #fff;
+  }
+  .dates li.today::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .dates li.inactive {
+    color: #ccc;
+  }
+
+.container2 {
+    background-color: #ffffff;
+    width: 570px; 
+    height: 700px;
+    margin: 10px; 
+    padding: 15px; 
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+
+} 
+
+#newtask {
+  display: flex;
+  flex: 1;
+  background-color: #ffffff5c;
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.145);
+  width: 90%;
+}
+
+#newtask input {
+  flex: 1;
+  width: calc(70% - 10px);
+  height: 45px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border: 2px solid #00000047;
+  padding: 12px;
+  color: #111111;
+  background-color: #ffffff5c;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+#newtask input:focus {
+  outline: none;
+  border-color: #ffffff5c;
+}
+
+#newtask button {
+  width: calc(30% - 10px);
+  margin: 10px; 
+  height: 50px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #4271bcd7;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+#tasks {
+  background-color:#ffffff5c;
+  padding: 20px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(212, 212, 212, 0.3);
+  width: 90%;
+  position: relative;
+}
+
+.task {
+  background-color:#ffffff5c;
+  height: 50px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffffff5c;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.task span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.task button {
+  background-color: #4271bc;
+  color: #ffffffe1;
+  height: 100%;
+  width: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center; /* This centers the children horizontally */
+  gap: 20px; /* Adds some space between the children */
+  padding: 20px; /* Adds some padding around the children */
+}
+
+@media (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+      align-items: center; /* This will stack them vertically and align them in the center */
+  }
+}

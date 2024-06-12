@@ -1,0 +1,171 @@
+/* Reset default browser styles */
+/* This section resets the margin and padding for the body, headings, paragraphs, and list items to ensure a consistent starting point across browsers. */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body style */
+/* Sets the global font family, applies a background image that covers the entire page, ensuring a consistent and visually appealing background. */
+body {
+    font-family: Arial, sans-serif;
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat;
+    background-size: cover;
+}
+
+/* Container */
+/* Centralizes content within a maximum width, providing consistent layout and padding around the content. */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main content area styles */
+/* Applies vertical padding to the main content area, creating space above and below the content for better readability. */
+main {
+    padding: 20px 0;
+}
+/* Enhances visibility and hierarchy of H2 headings within the main content area. */
+main h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+/* Defines the appearance of the site's footer, including background color, text color, alignment, padding, and margin. */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 50px;
+}
+
+/* Navigation Menu styles */
+/* Styles the fixed navigation bar, ensuring it's always visible at the top of the viewport with a high z-index. */
+nav {
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+/* Aligns navigation items to the right side, removing default margin and padding for a cleaner look. */
+nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+/* Display navigation list items inline with spacing for a horizontal layout. */
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+/* Styles for navigation links, ensuring they are bold and visually distinct without underlines. */
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Hover effect for navigation links to enhance user interaction. */
+nav ul li a:hover {
+    color: #ffcc00;
+}
+/* Tooltip styling for icons within the navigation, showing title attribute content on hover. */
+nav ul li i::after {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav ul li:hover i::after {
+    display: block;
+}
+
+/* Main content styles for courses */
+/* Adjusts the top padding of the main content to account for the fixed navigation, ensuring content does not get obscured. */
+main {
+    padding-top: 80px;
+}
+/* Container adjustments specific to the dashboard page, optimizing width for dashboard content. */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Dashboard header styling, including text alignment and spacing below the header. */
+.dashboard-header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+.dashboard-header h1 {
+    margin: 0;
+}
+
+/* Course Boxes */
+/* Flexbox layout for course boxes, including wrapping, spacing, and a subtle shadow for depth. */
+.course-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+    transform: translateX(-100px);
+    width: 80%;
+}
+
+.course-box {
+    display: inline-block; /* Display boxes in a row */
+    width: calc(50% - 20px); /* Calculate the width for two boxes per row with margin */
+    margin-right: 20px; /* Add margin between boxes */
+    margin-bottom: 20px; /* Add margin below each row */
+    position: relative; /* Set position to relative */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(25, 23, 23, 0.1);
+    border-radius: 5px; /* Adds space between the sections */
+    border: 2px solid #c8c6c6; /* Add a border around each course box */
+    box-sizing: border-box; /* Include the border in the box's total size */
+}
+
+/* Styling for links within course boxes, including block display, padding, and center-aligned text. */
+.course-box a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+/* Hover effects for links within course boxes to indicate interactivity. */
+.course-box a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+/* Styling for images within course boxes, ensuring they cover the designated area and maintain aspect ratio. */
+.course-box img {
+    width: 105.9%;
+    margin-left: -10px;
+    height: 140%;
+    object-fit: cover;
+    margin-top: -10px;
+}
+/* Course title styling within boxes, emphasizing the course name. */
+.course-box h2 {
+    margin: 0;
+    font-size: 25px;
+}

@@ -1,0 +1,91 @@
+/* Global styles: Resets padding, margin, sets box-sizing, and border-radius for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style: Sets the background image with cover size and center position */
+body{
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat;
+    background-size: cover;
+}
+
+/* Container style: Centers the form with a shadow for depth */
+.container{
+    display: flex;
+    height: 650px;
+    width: 1000px;
+    margin: 60px auto 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Form styling: Sets layout for the login form, including the background color */
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background-color: rgba(208, 241, 255, 0.997);
+}
+
+/* Form image styling: Sets size and margins for the logo/image */
+.form img{
+    width: 330px;
+    height: 200px;
+    margin: 40px;
+}
+
+/* Input box styling: Sets styling for username and password input fields */
+.box{
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.271);
+}
+
+/* Submit button styling: Sets the button appearance, hover effects */
+#submit{
+    width: 40%;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.271);
+}
+
+#submit:hover{
+    background-color: rgb(151, 198, 255);
+    cursor: pointer;
+}
+
+/* Forgot password link styling: Sets link appearance and hover effects */
+.form a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.form a:hover{
+    color: rgb(165, 42, 42);
+}
+
+/* Side image styling: Adjusts the styling for the side image */
+.side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%; /* Adjusted to match the actual size and layout; removed the redundant properties */
+    background: url('images/Login-page-image.jpg') no-repeat center;
+    background-size: 100%;
+    background-color: white;
+}
+
+/* Note: .side img selector removed as it seems to be redundant given the .side class directly applies the background image. */

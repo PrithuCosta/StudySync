@@ -1,0 +1,165 @@
+/* Global Resets */
+/* Resets all elements' margin and padding to ensure a consistent layout across browsers. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+/* Sets up the background image, font, and ensures that the body covers the entire viewport height. */
+body {
+    min-height: 100vh;
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat center;
+    background-size: cover; /* Ensures background image covers the full viewport. */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+/* Styles the navigation bar with a background color and a subtle shadow for depth. */
+nav {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+/* Navigation List */
+/* Aligns navigation items horizontally to the end (right side) of the navigation bar. */
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Navigation Items */
+/* Sets the height for each navigation item for consistency. */
+nav li {
+    height: 50px;
+}
+
+/* Navigation Links */
+/* Styles the navigation links, including padding, alignment, and color. */
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(42, 40, 40);
+}
+
+/* Navigation Link Hover Effect */
+/* Adds a background color on hover for visual feedback. */
+nav a:hover {
+    background-color: rgba(56, 53, 53, 0.452);
+}
+
+/* First Navigation Item Styling */
+/* Ensures the first navigation item is aligned to the left, creating a separation from other items. */
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* Sidebar Styling */
+/* Sets up the sidebar's fixed position, dimensions, and visual styling including a blur effect. */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.503);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Sidebar List and Link Styling */
+/* Ensures sidebar links occupy the full width for better tap targets. */
+.sidebar li, .sidebar a {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+/* Hides the mobile menu button by default, only shown in responsive modes. */
+.menu-button {
+    display: none;
+}
+
+/* Responsive Styling */
+@media(max-width:950px) {
+    /* Hides certain elements on mobile devices for a cleaner layout. */
+    .hideOnMobile {
+        display: none;
+    }
+    /* Shows the menu button on devices with widths 950px or less. */
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width:450px) {
+    /* Adjusts the sidebar width to 100% for smaller devices for full-screen coverage. */
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Main Content Container */
+/* Centers the main content with maximum width and margin adjustments. */
+.container {
+    max-width: 1200px;
+    margin: 30px auto 10px;
+    padding: 0 40px;
+}
+
+/* Table/List Styling */
+/* Styles the class list with a clean layout, borders, and box shadow for depth. */
+.class-list {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header and Cell Styling */
+/* Adjusts text alignment, padding, and adds a border for separation. */
+.class-list th, .class-list td {
+    text-align: left;
+    padding: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table Header Styling */
+/* Distinguishes table headers with a background color and bold font weight. */
+.class-list th {
+    background-color: #e9e9e9;
+    font-weight: bold;
+}
+
+/* Table Image Styling */
+/* Styles images in the list to be round and sets their size and optional border. */
+.class-list img {
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+/* Introduction Container */
+/* Centralizes and styles the introduction container with background, padding, and shadow for emphasis. */
+.intro-container {
+    text-align: center;
+    background-color: #ffffff;
+    width: 1200px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin: 40px auto 0;
+}
+/* Styles the heading within the introduction container for visual emphasis. */
+.intro-container h2 {
+    color: #000000;
+}

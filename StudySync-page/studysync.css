@@ -1,0 +1,204 @@
+/* Global Resets */
+/* Resets margin and padding for all elements to maintain consistency across browsers. */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+/* Sets up the background, ensures body fills viewport height, and sets default font. */
+body {
+    min-height: 100vh;
+    background: url('images/vivid-blurred-colorful-background.jpg') no-repeat center;
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar Styling */
+/* Styles for the navigation bar, including background color and box shadow for depth. */
+nav {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+/* Navigation List Styling */
+/* Aligns navigation items to the end (right) and centers them vertically. */
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Navigation Item Styling */
+/* Sets a fixed height for each navigation item for consistency. */
+nav li {
+    height: 50px;
+}
+
+/* Navigation Link Styling */
+/* Styles navigation links, including alignment, padding, and color. */
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(42, 40, 40);
+}
+
+/* Navigation Link Hover Effect */
+/* Changes background color on hover for visual feedback. */
+nav a:hover {
+    background-color: rgba(56, 53, 53, 0.452);
+}
+
+/* First Navigation Item Style */
+/* Pushes the first item to the left, creating a visual separation from other navigation items. */
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* Sidebar Styling */
+/* Configures the sidebar's appearance and position, including its blur effect. */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.503);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Sidebar List and Link Styling */
+/* Ensures full width for sidebar elements for better visual structure and accessibility. */
+.sidebar li,
+.sidebar a {
+    width: 100%;
+}
+
+/* Mobile Menu Button Style */
+/* Hides the mobile menu button by default, becomes visible in mobile views. */
+.menu-button {
+    display: none;
+}
+
+/* Responsive Design Adjustments */
+/* Adjusts layout for smaller screens, including showing the mobile menu button and adjusting the sidebar. */
+@media(max-width:950px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+@media(max-width:450px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Additional UI Component Styling */
+/* Styles for various UI components like buttons, inputs, and containers for interaction and display. */
+
+/* Options Section Styling */
+/* Sets up a flexible layout for interactive options with gap spacing. */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Button Styling */
+/* Configures the appearance and layout of buttons within the options section. */
+button {
+    height: 28px;
+    width: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 3px;
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    color: #020929;
+}
+
+/* Select Input Styling */
+/* Styles the select dropdown with padding, border, and rounded corners. */
+select {
+    padding: 7px;
+    border: 1px solid #37478c;
+    border-radius: 3px;
+}
+
+/* Font Styling for Options */
+/* Ensures consistent font styling within the options section. */
+.options label,
+.options select {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Input Wrapper Styling */
+/* Aligns inputs closely together with a small gap for a cohesive look. */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Color Input Styling */
+/* Customizes the color picker input for a more integrated look with the design. */
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Color Swatch Styling */
+/* Customizes the appearance of the color swatch within color inputs. */
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-moz-color-swatch {
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+
+/* Text Input Styling */
+/* Styles the main text input area, including margin, border, padding, and sizing. */
+#text-input {
+    margin-top: 10px;
+    border: 1px solid #000000;
+    padding: 20px;
+    height: 70vh;
+    width: 97.5%;
+}
+
+/* Container Styling */
+/* Configures the layout for content containers, including background, spacing, and shadows for depth. */
+.containers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container1 {
+    background-color: #ffffff;
+    width: 90%;
+    height: 800px;
+    margin: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+}
